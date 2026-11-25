@@ -1,0 +1,389 @@
+# 主页资料在这里编辑；随笔正文编辑 content/随笔.md。保存后刷新 http://127.0.0.1:4174/
+# 修改引号内的文字；多段正文写在三单引号之间。
+# 首页和项目页共用项目数据。竞赛排名、经历空项直接在下面补充。
+
+
+# 姓名、身份、学校、头像、GitHub，以及顶部导航
+[site]
+title = "fromostart"
+signature = "欲及人，还需三日；欲离地，不过三尺；欲合天，尚未三清。"
+description = "刘琪的个人主页：计算机系统、竞赛经历与 DebateForTruth。"
+favicon = "/images/site/favicon.svg"
+last_updated = "2026年11月19日"
+
+[author]
+name = "刘琪"
+title = "硕士生"
+institution = "计算机科学与技术"
+avatar = "/images/profile/avatar.png"
+
+[social]
+github = "https://github.com/fromostart"
+email = "fromostart@qq.com"
+location = "武汉市珞喻路1037号"
+location_details = ["湖北省武汉市洪山区珞喻路1037号"]
+location_url = "https://www.google.com/maps/search/?api=1&query=华中科技大学%20珞喻路1037号"
+
+[features]
+enable_likes = true
+
+[i18n]
+enabled = true
+locales = ["zh", "en"]
+default_locale = "zh"
+mode = "fixed"
+fixed_locale = "zh"
+persist = true
+switcher = true
+labels = { zh = "", en = "" }
+
+[[navigation]]
+title = "关于我"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "研究与项目"
+type = "page"
+target = "projects"
+href = "/projects/"
+
+[[navigation]]
+title = "竞赛"
+type = "page"
+target = "awards"
+href = "/awards/"
+
+[[navigation]]
+title = "经历"
+type = "page"
+target = "experience"
+href = "/experience/"
+
+[[navigation]]
+title = "随笔"
+type = "page"
+target = "writing"
+href = "/writing/"
+
+[[navigation]]
+title = "时刻"
+type = "page"
+target = "moments"
+href = "/moments/"
+
+# 首页自我介绍
+[about]
+type = "about"
+title = "关于我"
+content = '''
+我目前在华中科技大学（HUST）计算机科学与技术学院读硕士，加入信息存储及应用实验室（武汉国家光电研究中心）研究storage for AI，目前工作关注内存管理、存储 I/O 和移动端语义检索。我也对边缘智能、agent、AGI、信息论等方向感兴趣。
+
+我本科通过高考进入武汉大学（WHU）弘毅学堂（荣誉学院）学习计算机科学与技术，保研至华中科技大学。高中入选辽宁省英才计划（物理学科），大学参加了许多竞赛如数学建模、量子编程和 ASC 超算竞赛，以赛促学。
+
+我数理基础较好，逻辑思维清晰，擅长并热爱分析、钻研艰深的难题，学习能力强，能快速理解新领域新知识；热爱创新，总能在实践中对已有知识提出新的见解；思维发散，往往从多个角度思考问题；善于检索、获取信息；喜欢高效的团队合作，倾向于分工解决复杂的问题。
+
+我热爱生活，乐观自信，爱好广泛，加入武术、话剧社团，积极参加各种活动，毕业话剧演出观众600+；曾全程主办 60 余场校级辩论赛，单场到场观众 600 余人；负责实验室设备、团建经费管理，具备成熟的活动统筹、沟通协调经验，能在项目推进中主动识别问题、落地创新方案。
+
+'''
+[about.profile]
+research_interests = ["AI 系统与性能优化", "内存管理与存储 I/O", "移动端语义检索与边缘智能"]
+skills = ["C++", "Python", "MATLAB", "LaTeX", "Linux", "Android", "虚拟机", "英语六级", "普通话一级乙等"]
+
+[[about.sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+title = "关于我"
+
+[[about.sections]]
+id = "selected_projects"
+type = "cards"
+source = "projects.toml"
+title = "研究与项目"
+limit = 4
+
+[[about.sections]]
+id = "news"
+type = "list"
+title = "经历"
+source = "news.toml"
+
+# 研究与项目：byline 是卡片中金色的那一行
+[projects]
+type = "card"
+title = "研究与项目"
+
+[[projects.items]]
+title = "DebateForTruth"
+byline = "个人项目 / AI 辅助全栈开发"
+date = "持续开发"
+content = '''
+我独立发起的理性讨论网站。我希望所有人都能清楚地表达观点、提交论据、理解分歧，并在新证据出现时修正判断。我使用 AI 辅助完成产品规划和全栈开发，实现议题讨论、账户、审核和站内虚拟积分等功能。
+'''
+tags = ["Next.js","TypeScript","PostgreSQL"]
+
+
+[[projects.items]]
+title = "GCMA-Pro"
+byline = "荣耀-华科先进存储联合实验室 / 校企合作项目"
+date = "2025"
+content = '''
+在荣耀-华科先进存储联合实验室与荣耀公司合作开展的 Android 连续物理内存管理项目。我编写 MLP 训练代码、刷入指定 Android 系统、复现内核方案，并修改已有脚本开展手机测试。
+'''
+tags = ["Android / Linux","MLP","系统实验"]
+
+
+[[projects.items]]
+title = "移动端文件语义检索"
+byline = "低延迟、低内存语义检索研究"
+date = "研究中"
+content = '''
+研究有限内存与闪存条件下的文件语义搜索，围绕索引布局、缓存、元数据过滤与向量访问路径设计低延迟、低内存的检索方案。
+'''
+tags = ["语义检索","向量索引","内存与 I/O"]
+
+
+[[projects.items]]
+title = "六级流水线 RISC-V CPU"
+byline = "龙芯杯全国总决赛 / 团体奖"
+date = "2023"
+content = "六级流水线 RISC-V CPU 设计与全流程测试。针对 ALU、乘除法器带来的关键路径时序问题，将执行阶段拆分为 EX、EX_sub 两级流水，分离算术运算与 NPC、中断判断逻辑，优化时序裕量并提升处理器工作主频。"
+tags = [ "RISC-V", "处理器微架构", "时序优化"]
+
+[[projects.items]]
+title = "定日镜场优化设计"
+byline = "全国大学生数学建模竞赛 / 省级一等奖"
+date = "2023"
+content = '''
+围绕定日镜场布局与效率优化，采用模拟退火算法求解，承担建模求解与代码实现。
+'''
+tags = ["Python","MATLAB","模拟退火","数学建模"]
+
+
+[[projects.items]]
+title = "ASC 超算竞赛：并行程序与算力调配"
+byline = "并行程序调试 / 算力资源调配"
+date = "2023"
+content = '''
+参与 ASC 世界大学生超级计算机竞赛，承担并行程序调试与算力资源调配。
+'''
+tags = ["高性能计算","并行计算","集群"]
+
+
+# 竞赛：年份和排名没有提供的留空，直接补充即可。
+[awards]
+type = "card"
+title = "竞赛与荣誉"
+layout = "table"
+
+[[awards.items]]
+title = "全国大学生数学建模竞赛"
+date = "2023"
+award = "省一等奖"
+rank = "全国前8%"
+
+[[awards.items]]
+title = "全国大学生数学竞赛"
+date = "2023"
+award = "省二等奖"
+rank = ""
+
+[[awards.items]]
+title = "“龙芯杯”全国总决赛"
+date = "2023"
+award = "团体奖"
+rank = ""
+
+[[awards.items]]
+title = "蓝桥杯"
+date = "2023"
+award = "省三等奖"
+rank = ""
+
+[[awards.items]]
+title = "司南杯量子编程挑战赛"
+date = "2023"
+award = "全国三等奖"
+rank = "全国前6%"
+
+[[awards.items]]
+title = "华中杯数学建模挑战赛"
+date = "2022"
+award = "三等奖"
+rank = ""
+
+[[awards.items]]
+title = "CCF CSP 认证"
+date = ""
+award = "240 分"
+rank = ""
+
+[[awards.items]]
+title = "“互联网+”大学生创新创业大赛"
+date = ""
+award = "校赛三等奖"
+rank = ""
+
+[[awards.items]]
+title = "物理竞赛"
+date = "高中"
+award = "一等奖"
+rank = ""
+
+[[awards.sections]]
+title = "个人荣誉"
+layout = "list"
+
+[[awards.sections.items]]
+title = "武汉大学优秀学生"
+
+[[awards.sections.items]]
+title = "武汉大学优秀学生干部"
+
+[[awards.sections.items]]
+title = "乙等奖学金（两次）"
+
+[[awards.sections.items]]
+title = "武汉大学优秀毕业生"
+
+[[awards.sections.items]]
+title = "华中科技大学优秀学生干部"
+
+[[awards.sections.items]]
+title = "华中科技大学研究生一等学业奖学金"
+
+[[awards.sections.items]]
+title = "华中科技大学文体公益奖学金"
+
+
+# 经历：教育与科研已列出；学生工作保留空项填写。
+[experience]
+type = "card"
+title = "经历"
+layout = "sections"
+items = []
+
+[[experience.sections]]
+title = "教育经历"
+columns = ["学校", "专业与学位", "时间"]
+
+[[experience.sections.items]]
+title = "华中科技大学"
+field = "学术型硕士 · 计算机科学与技术 081200"
+date = "2025 至今"
+content = "信息存储及应用实验室"
+
+[[experience.sections.items]]
+title = "武汉大学"
+field = " 本科· 计算机科学与技术 080901"
+date = "2021–2025"
+content = "弘毅学堂 · 保研"
+
+[[experience.sections.items]]
+title = "东北育才学校"
+field = "高中"
+date = "2018–2021"
+content = "科创实验班"
+
+[[experience.sections]]
+title = "科研经历"
+layout = "list"
+
+[[experience.sections.items]]
+title = "华中科技大学信息存储及应用实验室"
+content = "计算机存储结构"
+
+[[experience.sections.items]]
+title = "华中科技大学东五实验室"
+content = "边缘计算"
+
+[[experience.sections.items]]
+title = "武汉大学超算队"
+content = "ASC 世界大学生超级计算机竞赛"
+
+[[experience.sections.items]]
+title = "测绘遥感国家重点实验室"
+content = "大学生创新创业训练计划项目 · 室内定位"
+
+[[experience.sections.items]]
+title = "WHUICSLAB 实验室"
+content = "低功耗计算学习与研究"
+
+[[experience.sections.items]]
+title = "武汉大学训创中心"
+content = "ROS 机器人操作系统与无人机编程"
+
+[[experience.sections]]
+title = "荣誉计划"
+
+[[experience.sections.items]]
+title = "武汉大学弘毅学堂"
+date = "2021–2025"
+byline = "基础学科拔尖学生培养计划 2.0"
+content = "计算机科学拔尖学生培养基地"
+
+
+[[experience.sections.items]]
+title = "辽宁省英才计划"
+date = "2019.12"
+byline = "物理学科"
+content = ""
+image = "/images/honors/yingcai-2019.jpg"
+image_alt = "2019年辽宁省英才计划导师聘任暨拜师仪式"
+image_source = "https://cxzx.neu.edu.cn/2018/1202/c1508a29743/pagem.htm"
+
+[[experience.sections]]
+title = "学生工作"
+columns = ["职务", "组织", "时间"]
+
+[[experience.sections.items]]
+title = ""
+organization = ""
+date = ""
+content = ""
+
+# 随笔：标题、正文、插图都在 content/随笔.md 编辑。
+[writing]
+type = "text"
+title = "随笔"
+source = "随笔.md"
+
+# 时刻：原片放进 .private/moments，运行 npm run photos 生成公开的模糊副本。
+[moments]
+type = "gallery"
+title = "时刻"
+blur_sigma = 24
+empty_message = "照片还在整理中。"
+
+# 首页动态：从新到旧排列。修改下方日期与文字，新增动态时复制一组放在最上面。
+[news]
+
+[[news.news]]
+date = "2025.9"
+content = "加入华中科技大学信息存储及应用实验室，攻读计算机科学与技术硕士。"
+
+[[news.news]]
+date = "2025.6"
+content = "武汉大学毕业，获得工学学士学位。"
+
+[[news.news]]
+date = "2024.9"
+content = "保研到华中科技大学计算机科学与技术学院。"
+
+[[news.news]]
+date = "2021.9"
+content = "二次选拔进入武汉大学弘毅学堂工科试验班，计算机方向，计算机科学与技术专业。"
+
+[[news.news]]
+date = "2020.9"
+content = "我获得物理竞赛省一等奖。"
+
+[[news.news]]
+date = "2019.12"
+content = "入选辽宁省英才计划（物理学科），在东北大学探索。"
+
+[[news.news]]
+date = "2018.9"
+content = "高中进入东北育才学校科创实验班。"

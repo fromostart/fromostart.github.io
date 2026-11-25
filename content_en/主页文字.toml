@@ -1,0 +1,339 @@
+# English content; shared settings come from content/主页文字.toml.
+[site]
+description = "Liu Qi’s personal site, featuring computer systems research, competitions, and DebateForTruth."
+last_updated = "November 19, 2026"
+
+[author]
+name = "Liu Qi"
+title = "Master’s Student"
+institution = "Computer Science and Technology"
+
+[social]
+location = "1037 Luoyu Road, Wuhan"
+location_details = [ "1037 Luoyu Road, Hongshan District, Wuhan, Hubei, China" ]
+
+[[navigation]]
+title = "About"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "Research & Projects"
+type = "page"
+target = "projects"
+href = "/projects/"
+
+[[navigation]]
+title = "Awards"
+type = "page"
+target = "awards"
+href = "/awards/"
+
+[[navigation]]
+title = "Experience"
+type = "page"
+target = "experience"
+href = "/experience/"
+
+[[navigation]]
+title = "Writing"
+type = "page"
+target = "writing"
+href = "/writing/"
+
+[[navigation]]
+title = "Moments"
+type = "page"
+target = "moments"
+href = "/moments/"
+
+[about]
+type = "about"
+title = "About"
+content = '''
+I am a master’s student in Computer Science and Technology at Huazhong University of Science and Technology. At the Information Storage and Applications Laboratory, I study AI systems under resource constraints, with a focus on memory management, storage I/O, and on-device semantic search. I am also interested in edge intelligence, AGI, and storage systems for AI workloads.
+
+I studied Computer Science and Technology at Wuhan University’s Hongyi Honor College and was recommended for postgraduate admission to HUST. In high school I took part in the Liaoning Young Talent Program in Physics. At university I competed in mathematical modeling, quantum programming, and the ASC Student Supercomputer Challenge. I also performed in our graduation play, *The Paint Is Still Wet*. Five months of working on lines and rehearsing stage movements with the cast made it one of my most memorable undergraduate experiences.
+
+I’m an ENTJ. In a new team, I usually listen first, work through the problem and disagreements, then share my judgment and help move the work forward. At university, I learned to trust my own judgment. I started [DebateForTruth](/projects/) to make room for people who want to discuss ideas seriously, present evidence, and change their minds when the evidence changes.
+'''
+
+[about.profile]
+research_interests = ["AI Systems & Performance", "Memory Management & Storage I/O", "On-device Semantic Search & Edge Intelligence"]
+skills = ["C++", "Python", "Verilog", "MATLAB", "LaTeX", "Linux", "Android", "Virtual Machines", "CET-4 / CET-6", "Mandarin Level 1-B"]
+
+[[about.sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+title = "About"
+
+[[about.sections]]
+id = "selected_projects"
+type = "cards"
+source = "projects.toml"
+title = "Research & Projects"
+limit = 4
+
+[[about.sections]]
+id = "news"
+type = "list"
+title = "News"
+source = "news.toml"
+
+[projects]
+type = "card"
+title = "Research & Projects"
+
+[[projects.items]]
+title = "DebateForTruth"
+byline = "Personal Project / AI-Assisted Full-Stack Development"
+date = "In Development"
+content = '''
+I started this platform for reasoned discussion. I want people to state their views clearly, provide evidence, understand disagreements, and revise their judgments as new evidence emerges. I planned and built the site myself with AI assistance across the full stack, including discussion topics, accounts, moderation, and an in-platform points system.
+'''
+tags = [ "Next.js", "TypeScript", "PostgreSQL" ]
+
+[[projects.items]]
+title = "GCMA-Pro"
+byline = "HONOR–HUST Joint Laboratory for Advanced Storage / Industry Collaboration"
+date = "2025"
+content = '''
+An Android contiguous physical memory management project carried out with HONOR through the HONOR–HUST Joint Laboratory for Advanced Storage. I wrote MLP training code, flashed the specified Android system, reproduced an existing kernel approach, and modified existing scripts for testing on a physical phone.
+'''
+tags = [ "Android / Linux", "MLP", "System Experiments" ]
+
+[[projects.items]]
+title = "On-device Semantic File Search"
+byline = "Low-latency, Memory-efficient Semantic Search"
+date = "Research in Progress"
+content = '''
+Researching semantic file search under limited memory and flash-storage budgets. The work explores index layout, caching, metadata filtering, and vector access paths to reduce latency and memory use.
+'''
+tags = [ "Semantic Search", "Vector Indexing", "Memory & I/O" ]
+
+[[projects.items]]
+title = "Six-stage Pipelined RISC-V CPU"
+byline = "Loongson Cup National Finals / Team Merit Award (Provincial First Prize)"
+date = "2023"
+content = '''
+Designed and tested a six-stage pipelined RISC-V CPU. To address critical-path timing issues in the ALU and multiplier/divider, I split execution into EX and EX_sub stages and separated arithmetic operations from NPC and interrupt-decision logic, improving timing margin and processor clock frequency.
+'''
+tags = [ "Verilog", "RISC-V", "Processor Microarchitecture", "Timing Optimization" ]
+
+[[projects.items]]
+title = "Heliostat Field Optimization"
+byline = "China Undergraduate Mathematical Contest in Modeling / Provincial First Prize"
+date = "2023"
+content = '''
+Optimized heliostat field layout and efficiency using simulated annealing. I worked on mathematical modeling, numerical solving, and implementation in code.
+'''
+tags = [ "Python", "MATLAB", "Simulated Annealing", "Mathematical Modeling" ]
+
+[[projects.items]]
+title = "ASC Supercomputing Competition: Parallel Programs & Resource Allocation"
+byline = "Parallel Program Debugging / Compute Resource Allocation"
+date = "2023"
+content = "Participated in the ASC Student Supercomputer Challenge, working on parallel program debugging and compute resource allocation."
+tags = [ "High-performance Computing", "Parallel Computing", "Clusters" ]
+
+[awards]
+type = "card"
+title = "Awards & Honors"
+layout = "table"
+
+[[awards.items]]
+title = "China Undergraduate Mathematical Contest in Modeling"
+date = "2023"
+award = "Provincial First Prize"
+rank = ""
+
+[[awards.items]]
+title = "Chinese Mathematics Competitions"
+date = "2023"
+award = "Provincial Second Prize"
+rank = ""
+
+[[awards.items]]
+title = "Loongson Cup National Finals"
+date = "2023"
+award = "Team Merit Award (Provincial First Prize)"
+rank = ""
+
+[[awards.items]]
+title = "Lanqiao Cup"
+date = "2023"
+award = "Provincial Third Prize"
+rank = ""
+
+[[awards.items]]
+title = "Sinan Cup Quantum Programming Challenge"
+date = "2023"
+award = "National Third Prize"
+rank = "Top 6% Nationwide"
+
+[[awards.items]]
+title = "Huazhong Cup Mathematical Modeling Challenge"
+date = "2022"
+award = "Third Prize"
+rank = ""
+
+[[awards.items]]
+title = "CCF CSP Certification"
+date = ""
+award = "240 points"
+rank = ""
+
+[[awards.items]]
+title = "Internet Plus College Student Innovation & Entrepreneurship Competition"
+date = ""
+award = "University-level Third Prize"
+rank = ""
+
+[[awards.items]]
+title = "Physics Competition"
+date = "High School"
+award = "First Prize"
+rank = ""
+
+[[awards.sections]]
+title = "Personal Honors"
+layout = "list"
+
+[[awards.sections.items]]
+title = "Outstanding Student, Wuhan University"
+
+[[awards.sections.items]]
+title = "Outstanding Student Leader, Wuhan University"
+
+[[awards.sections.items]]
+title = "Second-Class Scholarship (multiple awards)"
+
+[[awards.sections.items]]
+title = "Outstanding Graduate, Wuhan University"
+
+[[awards.sections.items]]
+title = "Commendation for Youth League Theoretical Studies, Wuhan University"
+
+[experience]
+type = "card"
+title = "Experience"
+layout = "sections"
+items = []
+
+[[experience.sections]]
+title = "Education"
+columns = [ "Institution", "Field & Degree", "Dates" ]
+
+[[experience.sections.items]]
+title = "Huazhong University of Science and Technology"
+field = "Research Master’s · Computer Science and Technology (081200)"
+date = "2025–Present"
+content = "Information Storage and Applications Laboratory"
+
+[[experience.sections.items]]
+title = "Wuhan University"
+field = "Bachelor’s · Computer Science and Technology (080901)"
+date = "2021–2025"
+content = "Hongyi Honor College · Recommended for Postgraduate Admission"
+
+[[experience.sections.items]]
+title = "Northeast Yucai School"
+field = "High School"
+date = "2018–2021"
+content = "Science & Technology Innovation Experimental Class"
+
+[[experience.sections]]
+title = "Research Experience"
+layout = "list"
+
+[[experience.sections.items]]
+title = "Information Storage and Applications Laboratory, HUST"
+content = "Computer Storage Architecture"
+
+[[experience.sections.items]]
+title = "Dongwu Laboratory, HUST"
+content = "Edge Computing"
+
+[[experience.sections.items]]
+title = "Wuhan University Supercomputing Team"
+content = "ASC Student Supercomputer Challenge"
+
+[[experience.sections.items]]
+title = "State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing"
+content = "Undergraduate Innovation Project · Indoor Positioning"
+
+[[experience.sections.items]]
+title = "WHUICSLAB"
+content = "Low-power Computing: Study and Research"
+
+[[experience.sections.items]]
+title = "Training and Innovation Center, Wuhan University"
+content = "ROS and UAV Programming"
+
+[[experience.sections]]
+title = "Honors Programs"
+
+[[experience.sections.items]]
+title = "Hongyi Honor College, Wuhan University"
+date = "2021–2025"
+byline = "Top-notch Students Training Program in Basic Disciplines 2.0"
+content = "Computer Science Top-notch Student Training Base"
+
+[[experience.sections.items]]
+title = "Liaoning Young Talent Program"
+date = "2019.12"
+byline = "Physics"
+content = ""
+image = "/yingcai-2019.jpg"
+image_alt = "2019 Liaoning Young Talent Program mentor appointment ceremony"
+image_source = "https://cxzx.neu.edu.cn/2018/1202/c1508a29743/pagem.htm"
+
+[[experience.sections]]
+title = "Student Leadership"
+columns = [ "Role", "Organization", "Dates" ]
+
+[[experience.sections.items]]
+title = ""
+organization = ""
+date = ""
+content = ""
+
+[writing]
+type = "text"
+title = "Writing"
+source = "随笔.md"
+
+[moments]
+type = "gallery"
+title = "Moments"
+blur_sigma = 24
+empty_message = "Photos are on the way."
+
+# Homepage news, newest first. Edit the dates and text below.
+[news]
+
+[[news.news]]
+date = "2025"
+content = "I joined the Information Storage and Applications Laboratory at HUST to pursue a master’s degree in Computer Science and Technology."
+
+[[news.news]]
+date = "2025"
+content = "I performed in Hongyi Honor College’s graduation play, The Paint Is Still Wet, after five months of rehearsal."
+
+[[news.news]]
+date = "2021"
+content = "I joined Wuhan University’s Hongyi Honor College to study Computer Science and Technology."
+
+[[news.news]]
+date = "2020.9"
+content = "I won a provincial first prize in a physics competition."
+
+[[news.news]]
+date = "2019"
+content = "I was selected for the Liaoning Young Talent Program in Physics."
+
+[[news.news]]
+date = "2018"
+content = "I entered the Science and Technology Innovation Experimental Class at Northeast Yucai School."
