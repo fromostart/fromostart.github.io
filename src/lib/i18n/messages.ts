@@ -14,9 +14,7 @@ export interface LocaleMessages {
     email: string;
     location: string;
     workAddress: string;
-    click: string;
     googleMap: string;
-    send: string;
     sendEmail: string;
     researchInterests: string;
     skillsAndLanguages: string;
@@ -55,9 +53,7 @@ const en: LocaleMessages = {
     email: 'Email',
     location: 'Location',
     workAddress: 'Work Address',
-    click: 'Click',
     googleMap: 'Google Map',
-    send: 'Send',
     sendEmail: 'Send Email',
     researchInterests: 'Research Interests',
     skillsAndLanguages: 'Skills & Languages',
@@ -96,9 +92,7 @@ const zh: LocaleMessages = {
     email: '邮箱',
     location: '地址',
     workAddress: '办公地址',
-    click: '点击',
     googleMap: '谷歌地图',
-    send: '发送',
     sendEmail: '发送邮件',
     researchInterests: '研究兴趣',
     skillsAndLanguages: '技能与语言',

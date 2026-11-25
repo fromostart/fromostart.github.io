@@ -94,13 +94,11 @@ skills = ["C++", "Python", "MATLAB", "LaTeX", "Linux", "Android", "虚拟机", "
 [[about.sections]]
 id = "about"
 type = "markdown"
-source = "bio.md"
 title = "关于我"
 
 [[about.sections]]
 id = "selected_projects"
 type = "cards"
-source = "projects.toml"
 title = "研究与项目"
 limit = 4
 
@@ -108,7 +106,6 @@ limit = 4
 id = "news"
 type = "list"
 title = "经历"
-source = "news.toml"
 
 # 研究与项目：byline 是卡片中金色的那一行
 [projects]
